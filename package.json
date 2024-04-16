@@ -1,0 +1,22 @@
+{
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "battle ship game",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Panda-Hi/Battleship.git"
+  },
+  "author": "Igor Wodecki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Panda-Hi/Battleship/issues"
+  },
+  "homepage": "https://github.com/Panda-Hi/Battleship#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

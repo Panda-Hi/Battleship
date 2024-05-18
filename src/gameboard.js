@@ -189,10 +189,34 @@ export function gameboard() {
       return "Wrong orientation";
     }
   }
+  function areAllShipsSunk() {
+    let allShipsSunk = true;
+    for (let i = 0; i < board.length; i += 1) {
+      for (let j = 0; j < board.length; j += 1) {
+        const cell = board[i][j][0];
+        if (cell !== "" && cell.isSunk() === false) {
+          allShipsSunk = false;
+        }
+      }
+    }
+    return allShipsSunk;
+  }
+  function receiveAttack(column, row) {
+    if (column > 9 || row > 9) {
+      return "Wrong coordinates";
+    }
+    const attackedCell = board[column][row];
+    attackedCell[1] = 1;
+    if (attackedCell[0] !== "") {
+      attackedCell[0].hit();
+    }
+  }
 
   const getBoard = () => board;
   return {
     placeShip,
+    receiveAttack,
+    areAllShipsSunk,
     getBoard,
   };
 }

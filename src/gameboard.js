@@ -218,5 +218,6 @@ export function gameboard() {
     receiveAttack,
     areAllShipsSunk,
     getBoard,
+    checkPlaceValidity,
   };
 }

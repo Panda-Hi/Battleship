@@ -11,9 +11,9 @@ body{
 *{
     margin: 0;
     padding: 0;
-    
+    color: #222222;
 }
-.placeView{
+#placeView{
     width: 100vw;
     height: 100vh;
     background-color: rgba(169, 169, 169, 0.8);
@@ -37,29 +37,43 @@ body{
     flex-direction: column;
     row-gap: 20px;
     
+    border: 2px solid #222222;
     font-size: clamp(1rem, 2vw, 2rem);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
-.placeGameboard{
+#placeGameboard{
     display: grid;
     grid-template-columns: repeat(10, clamp(20px, 10vw, 40px));
     grid-template-rows: repeat(10, clamp(20px, 10vw, 40px)); 
     
     border: 1px solid #333; 
 }
-.placeGameboard > div {
+#placeGameboard > div {
     background-color: #9bccec; 
     border: 1px solid #222222; 
 }
-.rotateBtn{
+#rotateBtn{
     height: 60px;
     width: 160px;
     font-size: 70%;
     border: none;
     border-radius: 10px;
 }
-.rotateBtn:hover{
+#rotateBtn:hover{
     transition-duration: 0.2s;
     filter: brightness(90%);
+}
+#emptyHit{
+    background-color: rgb(133, 255, 179) !important;
+}
+#ship{
+    background-color: #a6a6a6 !important;
+}
+#shipHit{
+ background-color: rgb(255, 133, 133) !important;
+ 
+}
+#placeShipHover{
+    filter: brightness(60%) !important;
 }
